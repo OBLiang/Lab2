@@ -58,6 +58,8 @@ public class Book {
 
     public static void main(String[] args) {
         System.out.println("Lab2 change demo......");
+        System.out.println("4354655");
+
 
     }
 }
