@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="ActionPack" extends="struts-default">
+
+        <action name="showallbook" class="ActionPackage.Action" method="BookShowAll">
+            <result name="BOOKSHOWALL">ShowBook.jsp</result>
+        </action>
+
+
+        <action name="AfindB" class="ActionPackage.Action" method="AfindB">
+            <result name="AFINDB">Ashow.jsp</result>
+            <result name="ERROR">ERROR.jsp</result>
+        </action>
+
+        <action name="delbook" class="ActionPackage.Action" method="del">
+            <result name="SUCCESSDEL" type="redirect">showallbook.action</result>
+        </action>
+
+        <action name="ABshow" class="ActionPackage.Action" method="AasBshow">
+            <result name="AASBSHOW">ABShow.jsp</result>
+        </action>
+
+        <action name="Updatedata" class="ActionPackage.Action" method="update">
+            <result name="SUCCESSUPDATE" type="redirect">showallbook.action</result>
+            <result name="FAILEDUPDATE">ERROR.jsp</result>
+        </action>
+        <action name="ahthoridfind" class="ActionPackage.Action" method="AuthorIDfind">
+            <result name="NOAUTHORID">AddBookandAuthor.jsp</result>
+            <result name="HAVEAUTHORID">Addbook.jsp</result>
+        </action>
+        <action name="addbookdirect" class="ActionPackage.Action" method="Addbookdire">
+            <result name="ADDBOOKDIRESUCCESS" type="redirect">showallbook.action</result>
+            <result name="WARNINIG" type="redirect">WARNING.jsp</result>
+        </action>
+        <action name="AddAuthorAndBook" class="ActionPackage.Action" method="Addbookandauthor">
+            <result name="WARNING">WARNING.jsp</result>
+            <result name="ADDBANDA" type="redirect">showallbook.action</result>
+
+
+        </action>
+    </package>
+</struts>
